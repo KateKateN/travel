@@ -1,3 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,500,700,900|Source+Serif+Pro:400,600,700&display=swap');
+// font-family: 'Source Serif Pro', serif;
+// font-family: 'Noto Sans HK', sans-serif;
 body
-   background: red
-   color: white   
+   font-family: 'Noto Sans HK', sans-serif;
+.travel-places-slider
+   width: 500px
+   border: 1px solid blue
+
+   .travel-place
+      width: 100px
+      height: 200px
+      border-radius: 5px
+      position: relative
+      margin: 10px
+      color: white
+      text-transform: capitalize
+      // border: 1px solid blue
+      overflow: hidden 
+      .img-wrapper
+         // border: 1px solid red;
+         img
+            position: absolute
+            width: auto
+            height: 200px
+            z-index: -1
+      .bookmark
+         font-size: 15px
+         padding: 10px
+      .info-wrapper
+         // border: 1px solid yellow
+         position: absolute
+         bottom: 0
+         width: 100%
+         padding: 10px 10px 20px 10px 
+         box-sizing: border-box
+         .locality
+            font-size: 10px
+         .place-name
+            font-size: 14px
+            font-weight: 500
+            margin-top: 5px
+         .rating
+            font-size: 8px
+            margin-top: 12px
+            i
+               margin-right: 4px

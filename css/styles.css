@@ -1,5 +1,61 @@
+@import url("https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,500,700,900|Source+Serif+Pro:400,600,700&display=swap");
 body {
-  background: red;
+  font-family: 'Noto Sans HK', sans-serif;
+}
+
+.travel-places-slider {
+  width: 500px;
+  border: 1px solid blue;
+}
+
+.travel-places-slider .travel-place {
+  width: 100px;
+  height: 200px;
+  border-radius: 5px;
+  position: relative;
+  margin: 10px;
   color: white;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+
+.travel-places-slider .travel-place .img-wrapper img {
+  position: absolute;
+  width: auto;
+  height: 200px;
+  z-index: -1;
+}
+
+.travel-places-slider .travel-place .bookmark {
+  font-size: 15px;
+  padding: 10px;
+}
+
+.travel-places-slider .travel-place .info-wrapper {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 10px 10px 20px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.travel-places-slider .travel-place .info-wrapper .locality {
+  font-size: 10px;
+}
+
+.travel-places-slider .travel-place .info-wrapper .place-name {
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 5px;
+}
+
+.travel-places-slider .travel-place .info-wrapper .rating {
+  font-size: 8px;
+  margin-top: 12px;
+}
+
+.travel-places-slider .travel-place .info-wrapper .rating i {
+  margin-right: 4px;
 }
 /*# sourceMappingURL=styles.css.map */
