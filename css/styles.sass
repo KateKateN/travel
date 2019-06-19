@@ -1,47 +1,447 @@
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans+HK:300,400,500,700,900|Source+Serif+Pro:400,600,700&display=swap');
-// font-family: 'Source Serif Pro', serif;
-// font-family: 'Noto Sans HK', sans-serif;
-body
-   font-family: 'Noto Sans HK', sans-serif;
-.travel-places-slider
-   width: 500px
-   border: 1px solid blue
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,400i,500,600,700&display=swap')
+// font-family: 'Source Serif Pro', serif
+// font-family: 'Noto Sans HK', sans-serif
+$shadow: 1px 1px 2px rgba(4,8,17,0.25)
+$accent-blue: rgba(71, 131, 170, 0.7)
 
-   .travel-place
-      width: 100px
-      height: 200px
-      border-radius: 5px
+body
+   font-family: 'Poppins', sans-serif
+
+// mein menu 
+.menu-wrapper
+   width: 80%
+   left: 50%
+   transform: translate(-50%);
+   display: grid
+   grid-template-columns: 10% 50%
+   justify-content: space-between
+   align-content: center
+   color: white
+   position: absolute
+   z-index: 1
+   .logo
+      font-size: 15px
+      font-weight: 600
+      padding: 20px 20px 20px 0;
+   .menu-items-wrapper
+      text-shadow: $shadow
+      font-weight: 500
+      font-size: 14px
+      display: grid
+      grid-template-columns: repeat(5, 1fr)
+      li
+         padding: 20px 0
+         list-style: none
+         text-align: center
+         a
+            padding: 20px
+            text-decoration: none
+            color: white
+      .lang
+         span
+            &::before
+               font-family: "Font Awesome 5 Free";
+               content: "\f111";
+               font-size: 4px
+               display: inline-block;
+               padding-right: 3px;
+               vertical-align: middle;
+               font-weight: 900;
+               // content: '<i class="fas fa-circle"></i>'
+               // position: absolute
+               // top: 29px
+               // right: 153px
+         a
+            padding: 20px 10px 20px 10px
+      .search
+         text-align: right  
+
+
+// main full width slider
+.full-width-slider
+   position: relative
+   overflow: hidden
+   width: 100%
+   height: 100vh
+.main-slider-wrapper
+   position: relative
+   overflow: hidden
+   .dark-gradient
+      position: absolute
+      bottom: -10px
+      z-index: 1
+      width: 100%
+      pointer-events: none
+      img
+         width: 100%
+         height: 300px
+   .main-slider
       position: relative
-      margin: 10px
-      color: white
-      text-transform: capitalize
-      // border: 1px solid blue
-      overflow: hidden 
-      .img-wrapper
-         // border: 1px solid red;
-         img
-            position: absolute
-            width: auto
-            height: 200px
-            z-index: -1
-      .bookmark
-         font-size: 15px
-         padding: 10px
-      .info-wrapper
+      width: 100%
+      height: 100vh
+      overflow: hidden
+      img
+         position: absolute
+         width: 100%
+      .slide-info-wrapper
          // border: 1px solid yellow
          position: absolute
-         bottom: 0
-         width: 100%
-         padding: 10px 10px 20px 10px 
-         box-sizing: border-box
-         .locality
-            font-size: 10px
-         .place-name
-            font-size: 14px
-            font-weight: 500
+         left: 10%
+         top: 50%
+         transform: translateY(-50%)
+         // top: 100px
+         // height: 400px
+         z-index: 1
+         height: 420px
+         display: grid
+         align-content: space-between
+         // justify-content: space-between
+      %nav-text-base
+         // position: absolute
+         font-family: 'Source Serif Pro', serif
+         text-shadow: $shadow
+         // color: white
+         font-size: 28px
+         font-weight: 600
+         text-transform: uppercase
+         // left: 10%
+         cursor: pointer
+         -webkit-touch-callout: none 
+         -webkit-user-select: none
+         -moz-user-select: none
+         -ms-user-select: none
+         user-select: none
+         z-index: 1
+         transition: all .3s ease
+         // border: 1px solid blue
+         // height: 20px
+         
+         &:hover
+            color: white
+      .prev-country
+         @extend %nav-text-base
+         // top: 100px
+         color: #dbdbdb
+      .next-country      
+         @extend %nav-text-base
+         // bottom: 70px
+         // vertical-align: bottom
+         // margin-top: 30px
+         color: #c4c4c4
+
+      .slide-info
+         color: white
+         // position: absolute
+         // top: 35%
+         // transform: translateY(-50%)
+         // margin-left: 10%
+         // z-index: 1
+         // border: 1px solid red
+         .discover
+            text-transform: capitalize
+            font-size: 15px
+         .country
+            font-family: 'Source Serif Pro', serif
+            font-size: 70px
+            text-transform: uppercase
+            font-weight: 600
             margin-top: 5px
-         .rating
-            font-size: 8px
-            margin-top: 12px
+            text-shadow: $shadow
+         .country-desc
+            font-size: 11px
+            width: 400px
+            line-height: 18px
+         .explore-btn
+            position: relative
+            width: 95px
+            font-size: 12px
+            padding: 13px 13px 13px 25px
+            border-radius: 20px
+            background: $accent-blue
+            margin-top: 20px
+            text-transform: capitalize
+            -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+            -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+            box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+            cursor: pointer
+            transition: .3s 
+            &:hover
+               background: rgba(71, 131, 170, 0.9)
+               -webkit-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+               -moz-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+               box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+            &:hover img
+               margin-left: 21px
+               transition: 0.3s 
+            img
+               width: 34px
+               margin-top: -10px
+               margin-left: 17px
+
+
+// mini slider inside main full width slider 
+.travel-places-slider-wrapper
+   // border: 2px solid yellow
+   position: relative
+   margin-top: 150px
+   height: 300px
+   .travel-places-slider
+      // border: 1px solid red
+      margin-left: 50%
+      position: absolute
+      width: 560px
+      .travel-place
+         // border: 1px solid blue
+         width: 200px
+         height: 210px
+         border-radius: 5px
+         position: relative
+         margin: 10px
+         color: white
+         text-transform: capitalize
+         outline: none
+         overflow: hidden 
+         -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+         -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+         cursor: pointer
+         transition: all .5s
+         &:hover
+            margin-top: 0px
+            height: 230px
+            -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+            -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+            box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+         .dark-gradient
+            // width: 100%
+            position: absolute
+            height: 200px
+            bottom: -10px
+            pointer-events: none
+            img
+               // bottom: 0
+               // height: 200px
+         .img-wrapper
+            img
+               // border: 1px solid red
+               position: absolute
+               width: auto
+               height: 250px
+               z-index: -1
+         .bookmark
+            font-size: 15px
+            padding: 10px
+            width: 20px
+            display: block
+            text-shadow: $shadow
+            &:hover
+               cursor: pointer
+               
+         .info-wrapper
+            // border: 1px solid blue
+            z-index: 1
+            position: absolute
+            bottom: 0
+            width: 100%
+            padding: 10px 10px 20px 10px 
+            box-sizing: border-box
+            .locality
+               font-size: 10px
+            .place-name
+               font-size: 14px
+               font-weight: 500
+               margin-top: 5px
+               text-shadow: $shadow
+            .rating
+               font-size: 8px
+               margin-top: 12px
+               i
+                  margin-right: 4px
+   // mini slider navigation               
+   %nav-arrow-base
+      top: 250px
+      position: absolute
+      width: 35px
+      height: 35px
+      border-radius: 50%
+      background: $accent-blue
+      cursor: pointer
+      transition: .3s ease
+      -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+      -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+      &:hover
+         -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
+         -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
+         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
+         background: rgba(71, 131, 170, 0.9)
+      img
+         transition: .3s ease
+         -webkit-touch-callout: none 
+         -webkit-user-select: none
+         -moz-user-select: none
+         -ms-user-select: none
+         user-select: none
+   .lft-arrow
+      bottom: -45px
+      left: 20px
+      @extend %nav-arrow-base
+      img
+         left: 17px
+      &:hover img
+         left: 14px
+   .rt-arrow
+      @extend %nav-arrow-base
+      bottom: -45px
+      left: 150px
+      img
+         right: 17px
+      &:hover img
+         right: 14px
+
+// about us section
+.about-us-wrapper-background
+   background: black
+   width: 100%
+   padding-bottom: 20px   
+.content-wrapper-width
+   width: 60%
+   margin: 0 auto
+.about-us
+   margin: 0 auto
+   display: grid
+   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+   grid-gap: 20px
+   grid-row: 1
+   align-items: center
+   .about-us-img
+      height: 300px
+      overflow: hidden
+      img
+         width: 110%
+   .about-us-content
+      // grid-row: 1
+      text-align: justify 
+      font-size: 13px
+      line-height: 19px
+      color: white
+      .about-us-logo
+         font-size: 22px
+         font-weight: 700
+         text-shadow: 0 0 10px #FFFFFF
+         padding: 7px 0
+         margin-bottom: 15px
+   
+// destinations section
+.destinations-wrapper-background
+   background: #4783aa
+   padding: 120px 0 50px 0
+   position: relative
+   // border: 1px solid red
+   img
+      position: absolute
+      top: 0px
+      width: 100%
+   .destinations
+      display: grid
+      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr))
+      grid-gap: 20px
+      .gallery, .tours, .booking, .weather
+         font-size: 14px  
+         display: grid
+         grid-gap: 20px
+         position: relative
+         align-content: start
+         color: white
+         text-align: center
+         padding: 10px 15px 50px 15px
+         margin: 20px 0
+         cursor: pointer
+         border: 1px solid  #4783aa
+         transition: .3s
+         border-radius: 5px
+         &:hover
+            border: 1px solid rgba(255, 255, 255, 0.4)
+         .title
+            font-size: 18px
+            font-weight: 600
+         .icon
+            height: 50px
+            width: 50px
+            background: #5192bc
+            margin: 0 auto
             i
-               margin-right: 4px
+               font-size: 23px
+               margin-top: 13px
+         .desc
+            font-size: 13px
+         .btn
+            position: absolute
+            bottom: 0px
+            font-size: 14px
+            text-transform: uppercase
+            font-weight: 600
+            width: 40%
+            bottom: 10px
+            right: 30%
+            padding: 4px 0
+            border-radius: 20px
+            background: rgba(255, 255, 255, 0.8)
+            color: #4783aa
+            transition: .3s
+            &:hover
+               background: rgba(255, 255, 255, 1)
+
+// explore section
+.explore-wrapper-background
+   background: #E8E8E8
+   padding: 80px 0
+   .explore
+      display: grid
+      grid-gap: 35px
+      grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
+   .explore-content
+      .explore-title
+         font-weight: 600
+         font-size: 25px
+         margin-bottom: 20px
+      .explore-text
+         font-size: 13px
+         line-height: 18px
+         text-align: justify
+         mark
+            background:  rgba(71, 131, 170, 0.3)
+      // .explore-directions
+      .direction-wrapper
+         margin-bottom: 30px 
+         position: relative
+         .direction-name
+            font-size: 15px 
+            font-weight: 600
+            margin-bottom: 7px
+         .percent-num
+            position: absolute
+            right: 0
+            top: -5px
+            font-size: 18px
+            font-weight: 600
+         .percentage-bar
+            width: 100%
+            border: 1px solid grey
+            border-radius: 3px
+            overflow: hidden
+            %percentage-bar-base
+               background: #4783aa
+               height: 4px
+               margin: 1px
+               border-radius: 3px
+            .percentage-bar-norway
+               @extend %percentage-bar-base
+               width: 52%
+            .percentage-bar-italy
+               @extend %percentage-bar-base
+               width: 28%   
+            .percentage-bar-greece
+               @extend %percentage-bar-base
+               width: 20% 

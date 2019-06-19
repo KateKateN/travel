@@ -5,109 +5,413 @@
 	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
 	<title>Travel</title>
 	<!-- MAIN -->
-	<link rel="shortcut icon" href="/img/ico/favicon.png" type="image/png">
-	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="shortcut icon" href="img/ico/favicon.png" type="image/png">
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+	<link rel="stylesheet" type="text/css" href="node_modules/normalize.css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="node_modules/slick-carousel/slick/slick.css"/>
 
-<!-- font awesome -->
-	<link rel="stylesheet" type="text/css" href="css/fontawesome-free-5.8.2-web/css/all.css"/>
-
-
-
-	<link rel="stylesheet" type="text/css" href="css/animate.css">
-
-	<!-- JQUERY -->
-	<!-- <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.1/themes/ui-lightness/jquery-ui.css"> -->
-	<!-- <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-	<script   src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"   integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU="   crossorigin="anonymous"></script> -->
-	
+	<link rel="stylesheet" type="text/css" href="node_modules/@fortawesome/fontawesome-free/css/all.min.css"/>
+	<link rel="stylesheet" type="text/css" href="node_modules/animate.css/animate.min.css">
 </head>
 <body>
-<section>
-	<div class="slide-info">
-		<div class="discover">discover</div>
-		<div class="country">norway</div>
-		<div class="country-desc">Norway, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far south, in the region around Oslo, the capital. About two-thirds of Norway is mountainous, and off its much-indented coastline lie, carved by deep glacial fjords, some 50,000 islands.</div>
-		<div class="explore-btn">explore</div>
-	</div>
-<!-- mini slider with recommend places to visit -->
-	<div class="travel-places-slider">
-
-		<div class="travel-place">
-			<div class="img-wrapper">
-				<img src="img/norway-1.jpg">
-			</div>
-			<div class="bookmark"><i class="far fa-bookmark"></i></div>
-			<div class="info-wrapper">
-				<!-- solid bookmark -->
-				<!-- <div class="bookmark"><i class="fas fa-bookmark"></i></div> -->
-				<div class="locality">east java</div>
-				<div class="place-name">mount brome</div>
-				<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-			</div>	
+<!-- main menu -->
+<header>
+	<div class="menu-wrapper"> 
+		<div class="logo">tra_vel</div>
+		<div class="menu-items-wrapper">
+			<li><a href="#">about</a></li>
+			<li><a href="#">destinations</a></li>
+			<li><a href="#">explore</a></li>
+			<!-- <li class="lang active-lang"><a href="#">en</a><i class="fas fa-circle"></i><span><a href="#">pl</a></span></li> -->
+			<li class="lang active-lang"><a href="#">en</a><span><a href="#">pl</a></span></li>
+			<li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
 		</div>
+	</div>	
+	<!-- <nav>
+	</nav> -->
+</header>
+<!-- main full width slider -->
+<div class="full-width-slider">
+	<section class="main-slider-wrapper">
+		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+		<div class="main-slider">
+			<img src="img/norway.jpg">
+			<div class="slide-info-wrapper">
+				<div class="prev-country">greece</div>
+				<div class="slide-info animated fadeInUp">
+					<div class="discover">discover</div>
+					<div class="country">norway</div>
+					<div class="country-desc">Norway, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
+					<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
+				</div>
+				<div class="next-country">italy</div>
+			</div>
+			<!-- mini slider with recommend places to visit inside main slider -->
+			<div class="travel-places-slider-wrapper">
+				<div class="travel-places-slider animated fadeIn">
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/norway-1.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">lalal</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
 
-		<div class="travel-place">
-			<div class="img-wrapper">
-				<img src="img/norway-1.jpg">
-			</div>
-			<div class="info-wrapper">
-				<div class="bookmark"><i class="far fa-bookmark"></i></div>
-				<!-- solid bookmark -->
-				<!-- <div class="bookmark"><i class="fas fa-bookmark"></i></div> -->
-				<div class="locality">east java</div>
-				<div class="place-name">mount brome</div>
-				<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-			</div>	
-		</div>
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/norway-2.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
 
-		<div class="travel-place">
-			<div class="img-wrapper">
-				<img src="img/norway-1.jpg">
-			</div>
-			<div class="info-wrapper">
-				<div class="bookmark"><i class="far fa-bookmark"></i></div>
-				<!-- solid bookmark -->
-				<!-- <div class="bookmark"><i class="fas fa-bookmark"></i></div> -->
-				<div class="locality">east java</div>
-				<div class="place-name">mount brome</div>
-				<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-			</div>
-		</div>
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/norway-3.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>
+					</div>
 
-		<div class="travel-place">
-			<div class="img-wrapper">
-				<img src="img/norway-1.jpg">
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/norway-4.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+				</div>
 			</div>
-			<div class="info-wrapper">
-				<div class="bookmark"><i class="far fa-bookmark"></i></div>
-				<!-- <div class="bookmark"><i class="fas fa-bookmark"></i></div> -->
-				<div class="locality">east java</div>
-				<div class="place-name">mount brome</div>
-				<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-			</div>	
-		</div>	
+		</div>		
+	</section>
+
+	<section class="main-slider-wrapper">
+		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+		<div class="main-slider">
+			<img src="img/italy.jpg">
+			<div class="slide-info-wrapper">
+				<div class="prev-country">norway</div>
+				<div class="slide-info animated fadeInUp">
+					<div class="discover">discover</div>
+					<div class="country">italy</div>
+					<div class="country-desc">Italy, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
+					<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
+				</div>
+				<div class="next-country">canada</div>
+			</div>
+
+			<!-- mini slider with recommend places to visit inside main slider -->
+			<div class="travel-places-slider-wrapper">
+				<div class="travel-places-slider animated fadeIn">
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/italy-1.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">lalal</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/italy-2.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/italy-3.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>
+					</div>
+
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/italy-4.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<section class="main-slider-wrapper">
+		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+			<div class="main-slider">
+				<img src="img/canada.jpg">
+				<div class="slide-info-wrapper">
+					<div class="prev-country">italy</div>
+					<div class="slide-info animated fadeInUp">
+						<div class="discover">discover</div>
+						<div class="country">canada</div>
+						<div class="country-desc">Canada, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
+						<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
+					</div>
+				<div class="next-country">greece</div>
+			</div>
+			<!-- mini slider with recommend places to visit inside main slider -->
+			<div class="travel-places-slider-wrapper">
+				<div class="travel-places-slider animated fadeIn">
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/canada-1.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">lalal</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+	
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/canada-2.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+	
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/canada-3.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>
+					</div>
+	
+					<div class="travel-place">
+						<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+						<div class="img-wrapper">
+							<img src="img/canada-4.jpg">
+						</div>
+						<div class="bookmark"><i class="far fa-bookmark"></i></div>
+						<div class="info-wrapper">
+							<div class="locality">east java</div>
+							<div class="place-name">mount brome</div>
+							<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+						</div>	
+					</div>
+				</div>
+			</div>
+		</div>		
+	</section>
+
+	<section class="main-slider-wrapper">
+			<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+			<div class="main-slider">
+				<img src="img/greece.jpg">
+				<div class="slide-info-wrapper">
+					<div class="prev-country">canada</div>
+					<div class="slide-info animated fadeInUp">
+						<div class="discover">discover</div>
+						<div class="country">greece</div>
+						<div class="country-desc">Greece, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
+						<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
+					</div>
+					<div class="next-country">norway</div>
+				</div>	
 		
+				<!-- mini slider with recommend places to visit inside main slider -->
+				<div class="travel-places-slider-wrapper">
+					<div class="travel-places-slider animated fadeIn">
+						<div class="travel-place">
+							<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+							<div class="img-wrapper">
+								<img src="img/greece-1.jpg">
+							</div>
+							<div class="bookmark"><i class="far fa-bookmark"></i></div>
+							<div class="info-wrapper">
+								<div class="locality">east java</div>
+								<div class="place-name">lalal</div>
+								<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+							</div>	
+						</div>
+		
+						<div class="travel-place">
+							<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+							<div class="img-wrapper">
+								<img src="img/greece-2.jpg">
+							</div>
+							<div class="bookmark"><i class="far fa-bookmark"></i></div>
+							<div class="info-wrapper">
+								<div class="locality">east java</div>
+								<div class="place-name">mount brome</div>
+								<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+							</div>	
+						</div>
+		
+						<div class="travel-place">
+							<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+							<div class="img-wrapper">
+								<img src="img/greece-3.jpg">
+							</div>
+							<div class="bookmark"><i class="far fa-bookmark"></i></div>
+							<div class="info-wrapper">
+								<div class="locality">east java</div>
+								<div class="place-name">mount brome</div>
+								<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+							</div>
+						</div>
+		
+						<div class="travel-place">
+							<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
+							<div class="img-wrapper">
+								<img src="img/greece-4.jpg">
+							</div>
+							<div class="bookmark"><i class="far fa-bookmark"></i></div>
+							<div class="info-wrapper">
+								<div class="locality">east java</div>
+								<div class="place-name">mount brome</div>
+								<div class="rating"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+							</div>	
+						</div>
+					</div>
+					<!-- ^ travel places slider close tag -->
+					<!-- <div class="slider-nav">
+						<div class="lft-arrow"><img src="img/ico/slim-left.png"></div>
+						<div class="nav-dots"></div>
+						<div class="rt-arrow"><img src="img/ico/slim-right.png"></div>
+					</div> -->
+				</div>
+			</div>		
+		</section>
+</div>
+
+<!--about us section -->
+<div class="about-us-wrapper-background">
+	<div class="content-wrapper-width">
+		<section class="about-us">
+			<div class="about-us-img"><img src="img/about-us-2.jpg"></div>
+			<div class="about-us-content">
+				<div class="about-us-logo">tra_vel</div>
+				With 25 years of professional experience in the field of outbound tourism, Coral Travel, offers on the Ukrainian tourist market only high quality tourism product. In 2014 the group of companies OTI, which includes Coral Travel, finished with  record-breaking results, sending over 3 million 100 thousand tourists and showing 24% growth over the previous year. Coral Travel offers the best resorts and hotels in 28 countries –  Turkey, Spain, Greece, Egypt, Thailand, Tunisia, Morocco, Israel, UAE, Andorra, Austria, China, Cuba, India, Mauritius, Tanzania, Dominican Republic, Indonesia, Maldives, Vietnam, Seychelles, Sri Lanka, Singapore, Mexico, Cambodia, Jordan and Ukraine.
+			</div>
+		</section>
 	</div>
-	<!-- <div class="slider-nav"> -->
-
+</div>
+<!-- destinations section -->
+<div class="destinations-wrapper-background">
+	<img src="img/dark-gradient-2.png">
+	<div class="content-wrapper-width">
+		<section class="destinations">
+			<div class="gallery">
+				<div class="title">gallery</div>
+				<div class="icon"><i class="fas fa-camera"></i></div>
+				<div class="desc">Lorem ipsum it. Repudiandae et, inventore ipsam reprehenderit distinctio numquam labore. Excepturi, alias obcaecati.</div>
+				<div class="btn">here</div>
+			</div>
+			<div class="tours">
+				<div class="title">tours</div>
+				<div class="icon"><i class="fas fa-plane"></i></div>
+				<div class="desc">Lorem ipsum it. Repudiandae et, inventore am labore. Excepturi, alias obcaecati.</div>					
+				<div class="btn">here</div>
+			</div>
+			<div class="booking">
+				<div class="title">booking</div>
+				<div class="icon"><i class="fas fa-laptop"></i></div>
+				<div class="desc">Lorem ipsum it. Repucati.</div>
+				<div class="btn">here</div>	
+			</div>
+			<div class="weather">
+				<div class="title">weather</div>
+				<div class="icon"><i class="fas fa-cloud"></i></div>
+				<div class="desc">Lorem ipsum it. Repudiandae et, inventore ipsam reprehenderit distinctio numquam labore. Excepturi, alias obcaecati.</div>					
+				<div class="btn">here</div>
+			</div>
+		</section>
 	</div>
+</div>
+	<!-- explore section -->
+<div class="explore-wrapper-background">
+	<div class="content-wrapper-width">
+		<section class="explore">
+			<div class="explore-content">
+				<div class="explore-title">explore</div>
+				<div class="explore-text">The aim of <mark>tra_vel</mark> - consolidation of its leading position among Ukrainian tour operators and increase in the market share occupied by the company, improving at the same time the quality of tourist product, as well as further implementation of innovative technologies, which are essential for the dynamic development of modern tourist industry. The company has become an example for many Ukrainian travel agencies which adopt experience of Coral Travel. This, in turn, is a stimulus for further development of the company.</div>
+			</div>
+			<div class="explore-content">
+				<div class="explore-title">top directions</div>
+					<div class="direction-wrapper">
+						<div class="direction-name">Norway</div>
+						<div class="percent-num">52%</div>
+						<div class="percentage-bar"><div class="percentage-bar-norway wow slideInLeft"></div></div>
+					</div>
+					<div class="direction-wrapper">
+						<div class="direction-name">Italy</div>
+						<div class="percent-num">28%</div>
+						<div class="percentage-bar"><div class="percentage-bar-italy wow slideInLeft"></div></div>
+					</div>
+					<div class="direction-wrapper">
+						<div class="direction-name">Greece</div>
+						<div class="percent-num">20%</div>						
+						<div class="percentage-bar"><div class="percentage-bar-greece wow slideInLeft"></div></div>
+					</div>	
+			</div>
+		</section>
+	</div>
+</div>	
 
-</section>
-
-
-
-<!-- js for slider -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<!-- <div ID = "toTop">&#9650;</div>	 -->
+<script type="text/javascript" src="node_modules/jquery/dist/jquery.min.js"></script>
 <script src="js/main.js"></script>
-<!-- <script src="js/wow.min.js"></script>
-              <script>
-              new WOW().init();
-              </script> -->
+<script src="node_modules/animate.css/wow.min.js"></script>
+<!-- js for slider -->
+<script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
+
 </body>
 </html>
