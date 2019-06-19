@@ -445,3 +445,56 @@ body
             .percentage-bar-greece
                @extend %percentage-bar-base
                width: 20% 
+
+// footer
+footer
+   background: #a3a3a3
+   position: relative
+   padding: 50px 0
+   .grey-gradient
+      position: absolute
+      top: 0
+      width: 100%
+   .info-wrapper
+      display: grid
+      grid-template-columns: 200px 2fr
+      align-items: center 
+      grid-gap: 50px 
+      .info
+         z-index: 1
+         font-size: 14px
+         color: white
+         i
+            width: 10px
+            height: 10px
+            text-shadow: $shadow
+            margin-right: 14px
+         .title
+            font-size: 15px
+            font-weight: 600
+            margin-bottom: 6px
+            text-shadow: $shadow
+         .street
+            margin-bottom: 4px
+         .tel      
+            margin-bottom: 25px
+         .socials
+            margin-top: 40px
+            font-size: 28px
+            a
+               text-decoration: none
+               color: white
+            i 
+               text-align: center
+               width: 35px
+               height: 35px
+               margin-right: 2px
+               transition: .3s
+               &:hover
+                  color: #539ccc
+                  text-shadow: 1px 1px 3px rgba(255,255,255,0.5)
+      .map
+         z-index: 1
+         overflow: hidden
+
+           
