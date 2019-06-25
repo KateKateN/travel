@@ -10,34 +10,61 @@ body
 
 // mein menu 
 .menu-wrapper
-   width: 80%
+   width: 85%
    left: 50%
-   transform: translate(-50%);
-   display: grid
-   grid-template-columns: 10% 50%
+   top: 5px
+   transform: translate(-50%)
+   // display: grid
+   display: flex
+   flex-wrap: wrap
+
+   // grid-template-columns: 10% 50%
+   // grid-template-columns: repeat(auto-fit, 10% 50%)
    justify-content: space-between
    align-content: center
    color: white
    position: absolute
    z-index: 1
+   // border: 1px solid yellow
    .logo
       font-size: 15px
       font-weight: 600
-      padding: 20px 20px 20px 0;
+      padding: 15px 15px 15px 0
+      margin-right: 50px
+      // border: 1px solid red
    .menu-items-wrapper
+      // border: 1px solid red
+      // width: 700px
       text-shadow: $shadow
       font-weight: 500
       font-size: 14px
+      // width: 150px
+      // display: 
       display: grid
       grid-template-columns: repeat(5, 1fr)
       li
-         padding: 20px 0
+         // padding: 15px 0 0 0 
+         // margin-top: 10px
+         padding-top: 15px
          list-style: none
          text-align: center
+         // border: 1px solid green
          a
-            padding: 20px
+            // padding: 10px
+            // width: 100
+            // padding-top: 10px
+            padding: 10px
+            // margin-top: 20px
             text-decoration: none
             color: white
+            transition: .3s
+            // border: 1px solid orange
+            &:hover 
+               background: rgba(225,255,255,.3)
+            // &:hover li
+               // background: white
+
+
       .lang
          span
             &::before
@@ -53,10 +80,9 @@ body
                // top: 29px
                // right: 153px
          a
-            padding: 20px 10px 20px 10px
+            padding: 10px 10px 10px 10px
       .search
          text-align: right  
-
 
 // main full width slider
 .full-width-slider
@@ -67,238 +93,245 @@ body
 .main-slider-wrapper
    position: relative
    overflow: hidden
+   // border: 1px solid red
+   height: 100vh 
+   img
+         position: absolute
+         width: 100%
    .dark-gradient
       position: absolute
-      bottom: -10px
-      z-index: 1
+      bottom: 300px
       width: 100%
       pointer-events: none
       img
          width: 100%
          height: 300px
-   .main-slider
-      position: relative
-      width: 100%
-      height: 100vh
-      overflow: hidden
-      img
-         position: absolute
-         width: 100%
-      .slide-info-wrapper
-         // border: 1px solid yellow
-         position: absolute
-         left: 10%
-         top: 50%
-         transform: translateY(-50%)
-         // top: 100px
-         // height: 400px
+   .slider-content-wrapper
+      // border: 1px solid green
+      width: 85%
+      margin: 0 auto
+      position: absolute
+      left: 50%
+      top: 50%
+      transform: translate(-50%, -50%)
+      // top: 50%
+      // transform: translateY(25%)
+      display: grid
+      grid-template-columns: repeat(auto-fit, 500px)
+      justify-content: space-between
+      align-items: center
+      // grid-gap: 20px
+      // border: 2px solid white
+      .main-content
          z-index: 1
-         height: 420px
+         height: 450px
          display: grid
          align-content: space-between
-         // justify-content: space-between
-      %nav-text-base
-         // position: absolute
-         font-family: 'Source Serif Pro', serif
-         text-shadow: $shadow
-         // color: white
-         font-size: 28px
-         font-weight: 600
-         text-transform: uppercase
-         // left: 10%
-         cursor: pointer
-         -webkit-touch-callout: none 
-         -webkit-user-select: none
-         -moz-user-select: none
-         -ms-user-select: none
-         user-select: none
-         z-index: 1
-         transition: all .3s ease
-         // border: 1px solid blue
-         // height: 20px
-         
-         &:hover
-            color: white
-      .prev-country
-         @extend %nav-text-base
-         // top: 100px
-         color: #dbdbdb
-      .next-country      
-         @extend %nav-text-base
-         // bottom: 70px
-         // vertical-align: bottom
-         // margin-top: 30px
-         color: #c4c4c4
-
-      .slide-info
-         color: white
-         // position: absolute
-         // top: 35%
-         // transform: translateY(-50%)
-         // margin-left: 10%
-         // z-index: 1
          // border: 1px solid red
-         .discover
-            text-transform: capitalize
-            font-size: 15px
-         .country
+         %nav-text-base
             font-family: 'Source Serif Pro', serif
-            font-size: 70px
-            text-transform: uppercase
-            font-weight: 600
-            margin-top: 5px
             text-shadow: $shadow
-         .country-desc
-            font-size: 11px
-            width: 400px
-            line-height: 18px
-         .explore-btn
-            position: relative
-            width: 95px
-            font-size: 12px
-            padding: 13px 13px 13px 25px
-            border-radius: 20px
+            font-weight: 600
+            font-size: 25px
+            text-transform: uppercase
+            cursor: pointer
+            -webkit-touch-callout: none 
+            -webkit-user-select: none
+            -moz-user-select: none
+            -ms-user-select: none
+            user-select: none
+            z-index: 1
+            transition: all .3s ease
+            &:hover
+               color: white
+         .prev-country
+            @extend %nav-text-base
+            // top: 100px
+            color: #dbdbdb
+         .next-country      
+            @extend %nav-text-base
+            // bottom: 70px
+            // vertical-align: bottom
+            // margin-top: 30px
+            color: #c4c4c4
+
+         .slide-info
+            color: white
+            // position: absolute
+            // top: 35%
+            // transform: translateY(-50%)
+            // margin-left: 10%
+            // z-index: 1
+            // border: 1px solid red
+            .discover
+               text-transform: capitalize
+               font-size: 15px
+            .country
+               font-family: 'Source Serif Pro', serif
+               font-size: 70px
+               text-transform: uppercase
+               font-weight: 600
+               margin-top: 5px
+               text-shadow: $shadow
+            .country-desc
+               font-size: 12px
+               width: 400px
+               line-height: 18px
+            .explore-btn
+               position: relative
+               width: 95px
+               font-size: 12px
+               padding: 13px 13px 13px 25px
+               border-radius: 20px
+               background: $accent-blue
+               margin-top: 20px
+               text-transform: capitalize
+               -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+               -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+               box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
+               cursor: pointer
+               transition: .3s 
+               &:hover
+                  background: rgba(71, 131, 170, 0.9)
+                  -webkit-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+                  -moz-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+                  box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+               &:hover img
+                  margin-left: 21px
+                  transition: 0.3s 
+               img
+                  width: 34px
+                  margin-top: -10px
+                  margin-left: 17px
+
+      // mini slider inside main full width slider 
+      .travel-places-slider-wrapper
+         // border: 2px solid yellow
+         // posi
+         // position: relative
+         // margin-top: 150px
+
+         height: 300px
+         width: 560px
+         .travel-places-slider
+            // border: 1px solid red
+            // margin-left: 50%
+            // position: absolute
+            // width: 560px
+            .travel-place
+               // border: 1px solid blue
+               width: 200px
+               height: 210px
+               border-radius: 5px
+               position: relative
+               margin: 10px
+               color: white
+               text-transform: capitalize
+               outline: none
+               overflow: hidden 
+               -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+               -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+               box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
+               cursor: pointer
+               transition: all .5s
+               &:hover
+                  margin-top: 0px
+                  height: 230px
+                  -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+                  -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+                  box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
+               .dark-gradient
+                  // width: 100%
+                  position: absolute
+                  height: 200px
+                  bottom: -10px
+                  pointer-events: none
+                  img
+                     // bottom: 0
+                     // height: 200px
+               .img-wrapper
+                  img
+                     // border: 1px solid red
+                     position: absolute
+                     width: auto
+                     height: 250px
+                     z-index: -1
+               .bookmark
+                  font-size: 15px
+                  padding: 10px
+                  width: 20px
+                  display: block
+                  text-shadow: $shadow
+                  &:hover
+                     cursor: pointer
+                     
+               .info-wrapper
+                  // border: 1px solid blue
+                  z-index: 1
+                  position: absolute
+                  bottom: 0
+                  width: 100%
+                  padding: 10px 10px 20px 10px 
+                  box-sizing: border-box
+                  .locality
+                     font-size: 10px
+                  .place-name
+                     font-size: 14px
+                     font-weight: 500
+                     margin-top: 5px
+                     text-shadow: $shadow
+                  .rating
+                     font-size: 8px
+                     margin-top: 12px
+                     i
+                        margin-right: 4px
+         // mini slider navigation               
+         %nav-arrow-base
+            position: absolute
+            top: 250px
+            
+            // left: 20px
+            // position: absolute
+            // right: 50%
+            // top: 50%
+            // transform: translate(-50%, -50%)
+            width: 35px
+            height: 35px
+            border-radius: 50%
             background: $accent-blue
-            margin-top: 20px
-            text-transform: capitalize
+            cursor: pointer
+            transition: .3s ease
             -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
             -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
             box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
-            cursor: pointer
-            transition: .3s 
             &:hover
+               -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
+               -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
+               box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
                background: rgba(71, 131, 170, 0.9)
-               -webkit-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
-               -moz-box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
-               box-shadow: 2px 2px 2px 0px rgba(255,255,255,0.2)
+            img
+               transition: .3s ease
+               -webkit-touch-callout: none 
+               -webkit-user-select: none
+               -moz-user-select: none
+               -ms-user-select: none
+               user-select: none
+         .lft-arrow
+            bottom: -45px
+            left: 20px
+            @extend %nav-arrow-base
+            img
+               left: 17px
             &:hover img
-               margin-left: 21px
-               transition: 0.3s 
+               left: 14px
+         .rt-arrow
+            @extend %nav-arrow-base
+            bottom: -45px
+            left: 150px
             img
-               width: 34px
-               margin-top: -10px
-               margin-left: 17px
-
-
-// mini slider inside main full width slider 
-.travel-places-slider-wrapper
-   // border: 2px solid yellow
-   position: relative
-   margin-top: 150px
-   height: 300px
-   .travel-places-slider
-      // border: 1px solid red
-      margin-left: 50%
-      position: absolute
-      width: 560px
-      .travel-place
-         // border: 1px solid blue
-         width: 200px
-         height: 210px
-         border-radius: 5px
-         position: relative
-         margin: 10px
-         color: white
-         text-transform: capitalize
-         outline: none
-         overflow: hidden 
-         -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
-         -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
-         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.55)
-         cursor: pointer
-         transition: all .5s
-         &:hover
-            margin-top: 0px
-            height: 230px
-            -webkit-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
-            -moz-box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
-            box-shadow: 2px 2px 5px 0px rgba(255,255,255,0.4)
-         .dark-gradient
-            // width: 100%
-            position: absolute
-            height: 200px
-            bottom: -10px
-            pointer-events: none
-            img
-               // bottom: 0
-               // height: 200px
-         .img-wrapper
-            img
-               // border: 1px solid red
-               position: absolute
-               width: auto
-               height: 250px
-               z-index: -1
-         .bookmark
-            font-size: 15px
-            padding: 10px
-            width: 20px
-            display: block
-            text-shadow: $shadow
-            &:hover
-               cursor: pointer
-               
-         .info-wrapper
-            // border: 1px solid blue
-            z-index: 1
-            position: absolute
-            bottom: 0
-            width: 100%
-            padding: 10px 10px 20px 10px 
-            box-sizing: border-box
-            .locality
-               font-size: 10px
-            .place-name
-               font-size: 14px
-               font-weight: 500
-               margin-top: 5px
-               text-shadow: $shadow
-            .rating
-               font-size: 8px
-               margin-top: 12px
-               i
-                  margin-right: 4px
-   // mini slider navigation               
-   %nav-arrow-base
-      top: 250px
-      position: absolute
-      width: 35px
-      height: 35px
-      border-radius: 50%
-      background: $accent-blue
-      cursor: pointer
-      transition: .3s ease
-      -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
-      -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
-      box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.4)
-      &:hover
-         -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
-         -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
-         box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.7)
-         background: rgba(71, 131, 170, 0.9)
-      img
-         transition: .3s ease
-         -webkit-touch-callout: none 
-         -webkit-user-select: none
-         -moz-user-select: none
-         -ms-user-select: none
-         user-select: none
-   .lft-arrow
-      bottom: -45px
-      left: 20px
-      @extend %nav-arrow-base
-      img
-         left: 17px
-      &:hover img
-         left: 14px
-   .rt-arrow
-      @extend %nav-arrow-base
-      bottom: -45px
-      left: 150px
-      img
-         right: 17px
-      &:hover img
-         right: 14px
+               right: 17px
+            &:hover img
+               right: 14px
 
 // about us section
 .about-us-wrapper-background
@@ -341,7 +374,7 @@ body
    // border: 1px solid red
    img
       position: absolute
-      top: 0px
+      top: -2px
       width: 100%
    .destinations
       display: grid
@@ -393,6 +426,64 @@ body
             &:hover
                background: rgba(255, 255, 255, 1)
 
+// form
+.form-wrapper-background
+   background: #fcfcfc
+   padding: 25px 0
+   .form-title
+      text-shadow: 1px 1px 1px rgba(4,8,17,0.1)
+      font-weight: 600
+      color: #4783aa
+      font-size: 14px
+      text-transform: uppercase
+      margin-bottom: 10px
+   .form-wrapper
+      display: grid
+      grid-gap: 10px
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr))
+      input 
+         background: #fcfcfc
+         color: #303030
+         border: 2px solid rgba(71, 131, 170, .5)
+         font-weight: 500
+         padding: 6px 15px
+         font-size: 14px
+         border-radius: 4px
+         outline: none
+         -webkit-box-shadow: 1px 1px 3px px rgba(0,0,0,0.2)
+         -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2)
+         box-shadow: 1px 1px 3px 0px rgba(0,0,0,0.2)
+         &::placeholder
+            text-transform: uppercase
+            font-size: 14px
+            color: rgba(71, 131, 170, .7)
+            font-weight: 500
+         &:hover
+            border: 2px solid rgba(71, 131, 170, .7)
+         &:focus
+            transition: .3s
+            border: 2px solid rgba(71, 131, 170, 1)
+            background: #ffffff  
+      input[type="submit"]
+         cursor: pointer
+         background: rgba(71, 131, 170, .7)
+         color: white
+         text-shadow: $shadow
+         text-transform: uppercase
+         font-size: 14px
+         font-weight: 500
+         // .form-wrapper-background .form-wrapper input[type="submit"]
+         // // на меншому екрані додати це:
+         // // grid-column: auto / span 2
+         // // justify-self: center         
+         // забрати верзні два значення і додати нижне на ше меншому екрні (телефон)
+         // width: 100%
+         width: 150px
+         justify-self: end
+         transition: .3s
+         &:hover
+            background: rgba(71, 131, 170, 1)
+
 // explore section
 .explore-wrapper-background
    background: #E8E8E8
@@ -403,6 +494,8 @@ body
       grid-template-columns: repeat( auto-fit, minmax(300px, 1fr) );
    .explore-content
       .explore-title
+         text-shadow: $shadow
+         color: #303030
          font-weight: 600
          font-size: 25px
          margin-bottom: 20px
@@ -445,21 +538,23 @@ body
             .percentage-bar-greece
                @extend %percentage-bar-base
                width: 20% 
-
+   
 // footer
 footer
    background: #a3a3a3
    position: relative
-   padding: 50px 0
+   // padding: 50px 0
+   padding-bottom: 50px
    .grey-gradient
       position: absolute
-      top: 0
+      top: -2
       width: 100%
+      pointer-events: none
    .info-wrapper
       display: grid
       grid-template-columns: 200px 2fr
       align-items: center 
-      grid-gap: 50px 
+      grid-gap: 60px 
       .info
          z-index: 1
          font-size: 14px
@@ -470,7 +565,8 @@ footer
             text-shadow: $shadow
             margin-right: 14px
          .title
-            font-size: 15px
+            text-transform: uppercase
+            font-size: 14px
             font-weight: 600
             margin-bottom: 6px
             text-shadow: $shadow
@@ -479,22 +575,162 @@ footer
          .tel      
             margin-bottom: 25px
          .socials
+            display: flex
+            align-items: center
+            align-content: center
+            height: 30px
             margin-top: 40px
-            font-size: 28px
+            font-size: 20px
             a
                text-decoration: none
                color: white
             i 
+               background: white
+               color: #303030
                text-align: center
-               width: 35px
-               height: 35px
-               margin-right: 2px
+               border-radius: 20px
+               padding-top: 7px
+               box-sizing: border-box
+               width: 33px
+               height: 33px
+               margin-right: 10px
                transition: .3s
+               text-shadow: 1px 1px 3px rgba(255,255,255,0.5)
                &:hover
-                  color: #539ccc
-                  text-shadow: 1px 1px 3px rgba(255,255,255,0.5)
+                  transition: .3s
+                  -webkit-box-shadow: 0px 0px 2px 1px rgba(255,255,255,1)
+                  -moz-box-shadow: 0px 0px 2px 1px rgba(255,255,255,1)
+                  box-shadow: 0px 0px 2px 1px rgba(255,255,255,1)
+            .fa-instagram
+               &:hover
+                  color: #EE1289
+            .fa-facebook-f 
+                &:hover
+                  color: #27408B
+            .fa-pinterest-p
+                &:hover
+                  color: #EE2C2C
+            .fa-youtube 
+                &:hover
+                  color: #CD0000
+      // #map
+      //    width: 600px
+      //    height: 300px
+      //    border: 1px solid green
       .map
-         z-index: 1
          overflow: hidden
+         z-index: 1
+         height: 300px
+         -webkit-box-shadow: 0px 0px 8px 2px rgba(255,255,255,1)
+         -moz-box-shadow: 0px 0px 8px 2px rgba(255,255,255,1)
+         box-shadow: 0px 0px 8px 2px rgba(255,255,255,1)
+         iframe
+            width: 100%            
 
-           
+// MEDIA QUERIES
+@media screen and (min-width: 1600px)
+   .menu-wrapper
+      width: 70%
+   .main-slider-wrapper .slider-content-wrapper
+      width: 70%   
+
+@media screen and (max-width: 1200px)    
+   .full-width-slider
+      width: 100%
+      height: 900px
+   .main-slider-wrapper
+      overflow: hidden
+      height: 900px
+   .main-slider-wrapper img
+      width: 200%
+   .main-slider-wrapper .slider-content-wrapper     
+      grid-template-columns: 80%
+      justify-content: center
+
+   // main full width slider (content)
+   .main-slider-wrapper .slider-content-wrapper .main-content
+      height: 380px
+      margin-bottom: 20px
+   .main-slider-wrapper .slider-content-wrapper .main-content .slide-info .discover
+      text-transform: uppercase
+      font-size: 18px
+      font-weight: 500
+      text-align: center
+   .main-slider-wrapper .slider-content-wrapper .main-content .slide-info .country
+      text-align: center
+   .main-slider-wrapper .slider-content-wrapper .main-content .slide-info .country-desc
+      width: 100%
+      text-align: center
+      box-sizing: border-box
+      padding: 0 40px
+   .main-slider-wrapper .slider-content-wrapper .main-content .slide-info .explore-btn
+      margin: 20px auto
+
+   // main full width slider (slider) 
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper
+      width: 100%
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .travel-places-slider .travel-place .img-wrapper img
+      width: 120%
+
+@media screen and (max-width: 1000px)
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper img
+      width: 100%
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .lft-arrow    
+      left: 37%
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .rt-arrow    
+      left: 57%
+   
+   .content-wrapper-width
+    width: 80%
+            
+
+@media screen and (max-width: 850px) 
+   .menu-wrapper
+      flex-direction: column
+      justify-content: center
+      .logo
+         margin-right: 0px
+         text-align: center
+         font-size: 17px
+         padding: 10px
+   .main-slider-wrapper .slider-content-wrapper     
+      top: 55%
+
+   // form 
+   .form-wrapper-background .form-wrapper input[type="submit"]
+      grid-column: auto / span 2
+      justify-self: center 
+
+@media screen and (max-width: 750px)  
+   .main-slider-wrapper .slider-content-wrapper .main-content .prev-country
+      padding-left: 40px
+   .main-slider-wrapper .slider-content-wrapper .main-content .next-country
+      padding-left: 40px
+
+   .main-slider-wrapper .slider-content-wrapper     
+      grid-template-columns: 100%
+      width: 100%
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper
+      background: black   
+      height: 350px
+      -webkit-box-shadow: -4px -21px 30px 18px rgba(0,0,0,1)
+      -moz-box-shadow: -4px -21px 30px 18px rgba(0,0,0,1)
+      box-shadow: -4px -21px 30px 18px rgba(0,0,0,1)
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .travel-places-slider
+      padding: 10px
+      margin: 0 auto
+
+
+@media screen and (max-width: 600px)
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .lft-arrow    
+      left: 30%
+   .main-slider-wrapper .slider-content-wrapper .travel-places-slider-wrapper .rt-arrow    
+      left: 62%
+
+   // form
+   .form-wrapper-background .form-wrapper
+      grid-auto-flow: row
+      grid-template-columns: 100%
+   .form-wrapper-background .form-wrapper input[type="submit"]
+      grid-column: auto
+      width: 100%

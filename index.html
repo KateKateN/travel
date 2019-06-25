@@ -26,17 +26,17 @@
 			<li class="lang active-lang"><a href="#">en</a><span><a href="#">pl</a></span></li>
 			<li class="search"><a href="#"><i class="fas fa-search"></i></a></li>
 		</div>
-	</div>	
-	<!-- <nav>
-	</nav> -->
+	</div>
 </header>
 <!-- main full width slider -->
 <div class="full-width-slider">
 	<section class="main-slider-wrapper">
+		<!-- <div class=""> -->
+		<img src="img/norway.jpg">
 		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
-		<div class="main-slider">
-			<img src="img/norway.jpg">
-			<div class="slide-info-wrapper">
+		<div class="slider-content-wrapper">
+			<div class="main-content">
+				<!-- <div class="slide-info-wrapper"> -->
 				<div class="prev-country">greece</div>
 				<div class="slide-info animated fadeInUp">
 					<div class="discover">discover</div>
@@ -45,7 +45,8 @@
 					<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
 				</div>
 				<div class="next-country">italy</div>
-			</div>
+				<!-- </div> -->
+			</div>	
 			<!-- mini slider with recommend places to visit inside main slider -->
 			<div class="travel-places-slider-wrapper">
 				<div class="travel-places-slider animated fadeIn">
@@ -102,14 +103,16 @@
 					</div>
 				</div>
 			</div>
-		</div>		
+		</div>	
+		<!-- </div>		 -->
 	</section>
 
 	<section class="main-slider-wrapper">
+		<img src="img/italy.jpg">
 		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
-		<div class="main-slider">
-			<img src="img/italy.jpg">
-			<div class="slide-info-wrapper">
+		<div class="slider-content-wrapper">
+			<div class="main-content">
+				<!-- <div class="slide-info-wrapper"> -->
 				<div class="prev-country">norway</div>
 				<div class="slide-info animated fadeInUp">
 					<div class="discover">discover</div>
@@ -180,17 +183,17 @@
 	</section>
 
 	<section class="main-slider-wrapper">
+		<img src="img/canada.jpg">
 		<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
-			<div class="main-slider">
-				<img src="img/canada.jpg">
-				<div class="slide-info-wrapper">
-					<div class="prev-country">italy</div>
-					<div class="slide-info animated fadeInUp">
-						<div class="discover">discover</div>
-						<div class="country">canada</div>
-						<div class="country-desc">Canada, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
-						<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
-					</div>
+		<div class="slider-content-wrapper">
+			<div class="main-content">
+				<div class="prev-country">italy</div>
+				<div class="slide-info animated fadeInUp">
+					<div class="discover">discover</div>
+					<div class="country">canada</div>
+					<div class="country-desc">Canada, country of northern Europe that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the far that occupies the western half of the Scandinavian peninsula. Nearly half of the inhabitants of the country live in the farsouth.</div>
+					<div class="explore-btn">explore<img src="img/ico/slim-right.png"></div>
+				</div>
 				<div class="next-country">greece</div>
 			</div>
 			<!-- mini slider with recommend places to visit inside main slider -->
@@ -253,10 +256,10 @@
 	</section>
 
 	<section class="main-slider-wrapper">
+		<img src="img/greece.jpg">
 			<div class="dark-gradient"><img src="img/dark-gradient.png"></div>
-			<div class="main-slider">
-				<img src="img/greece.jpg">
-				<div class="slide-info-wrapper">
+			<div class="slider-content-wrapper">
+				<div class="main-content">
 					<div class="prev-country">canada</div>
 					<div class="slide-info animated fadeInUp">
 						<div class="discover">discover</div>
@@ -377,6 +380,18 @@
 		</section>
 	</div>
 </div>
+<!-- form -->
+<div class="form-wrapper-background">
+	<div class="content-wrapper-width">
+		<div class="form-title">we will send you new offers</div>
+		<form action="" class="form-wrapper">
+			<input type="text" placeholder="name">
+			<input type="email" placeholder="email">
+			<input type="submit" value="send">
+		</form>
+		<!-- </section> -->
+	</div>
+</div>
 <!-- explore section -->
 <div class="explore-wrapper-background">
 	<div class="content-wrapper-width">
@@ -429,6 +444,7 @@
 					</div>
 			</div>
 			<div class="map">
+			<!-- <div id="map"></div> -->
 					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2573.108476975682!2d24.026927315128688!3d49.84041923901299!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x473add6dde7d2315%3A0x7850c6e2185124a6!2z0L_RgNC-0YHQvy4g0KHQstC-0LHQvtC00YssIDEwLCDQm9GM0LLQvtCyLCDQm9GM0LLQvtCy0YHQutCw0Y8g0L7QsdC70LDRgdGC0YwsIDc5MDAw!5e0!3m2!1sru!2sua!4v1560984776573!5m2!1sru!2sua" width="900" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
 			</div>
 		</div>	
@@ -439,6 +455,7 @@
 <script src="node_modules/animate.css/wow.min.js"></script>
 <!-- js for slider -->
 <script type="text/javascript" src="node_modules/slick-carousel/slick/slick.min.js"></script>
-
+<!-- for map -->
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRsM2lwytEZZMEIHlffwfrvlsMge34GK8&callback=initMap"></script>
 </body>
 </html>
